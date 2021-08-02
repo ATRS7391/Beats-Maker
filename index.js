@@ -9,29 +9,12 @@ window.addEventListener("load", () => {
     });
   });
   document.addEventListener("keydown", function(event) {
-    if (event.key == 1){
-      sounds[0].currentTime = 0;
-      sounds[0].play();
+    try {
+      sounds[event.key-1].currentTime = 0;
+      sounds[event.key-1].play();
     }
-    else if (event.key == 2){
-      sounds[1].currentTime = 0;
-      sounds[1].play();
-    }
-    else if (event.key == 3){
-      sounds[2].currentTime = 0;
-      sounds[2].play();
-    }
-    else if (event.key == 4){
-      sounds[3].currentTime = 0;
-      sounds[3].play();
-    }
-    else if (event.key == 5){
-      sounds[4].currentTime = 0;
-      sounds[4].play();
-    }
-    else if (event.key == 6){
-      sounds[5].currentTime = 0;
-      sounds[5].play();
+    catch(err) {
+      console.log("Use 1 - 6, not any other to play. ");
     }
   });
 });
