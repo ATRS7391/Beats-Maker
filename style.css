@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  color: rgb(255, 255, 255);
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 50px 0px 30px 0px;
+  text-align: center;
+  font-size: 40px;
+}
+header p {
+  font-size: 25px;
+}
+
+.pads {
+  width: 100%;
+  display: flex;
+}
+.pads > div {
+  height: 200px;
+  width: 100px;
+  flex: 1;
+  margin-bottom: 100px;
+}
+
+.pads > div:hover {
+  background-color: white;
+}
+
+.pad1 {
+  background: #ff0062;
+}
+.pad2 {
+  background: #ffa600;
+}
+.pad3 {
+  background: #b700ff;
+}
+.pad4 {
+  background: #7bff00;
+}
+.pad5 {
+  background: #6200ff;
+}
+.pad6 {
+  background: #00ccff;
+}
+
+.visual > div {
+  position: absolute;
+  bottom: 0%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transform: scale(1);
+  z-index: -1;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0%;
+    left: 20%;
+  }
+  50% {
+    bottom: 50%;
+    left: 50%;
+  }
+
+  100% {
+    bottom: 00%;
+    left: 80%;
+  }
+}
